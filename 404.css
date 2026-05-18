@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins;
+}
+
+body{
+    background:#fff;
+    color:#000;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.container{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+}
+
+.box{
+    text-align:center;
+    border:1px solid #eee;
+    border-radius:18px;
+    padding:50px 30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    max-width:500px;
+}
+
+.box h1{
+    font-size:90px;
+    letter-spacing:-2px;
+}
+
+.box h2{
+    font-size:18px;
+    margin-top:10px;
+}
+
+.box p{
+    font-size:13px;
+    color:#555;
+    margin-top:10px;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 16px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    text-decoration:none;
+    color:#000;
+    font-size:13px;
+    transition:0.25s;
+}
+
+.btn:hover{
+    background:#000;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+/* FOOTER (same vibe as your index) */
+.footer{
+    margin-top:40px;
+    border-top:1px solid #eee;
+    padding:50px 20px 25px;
+    background:#fff;
+}
+
+.footer-box{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.footer-text h2{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.footer-text p{
+    font-size:13px;
+    color:#666;
+}
+
+.footer-socials{
+    margin-top:18px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.footer-socials a{
+    width:40px;
+    height:40px;
+    border:1px solid #eee;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#000;
+    text-decoration:none;
+    transition:0.25s;
+}
+
+.footer-socials a:hover{
+    background:#000;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+.footer-bottom{
+    margin-top:30px;
+    text-align:center;
+    font-size:12px;
+    color:#888;
+    border-top:1px solid #eee;
+    padding-top:15px;
+}
