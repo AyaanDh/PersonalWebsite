@@ -2,1417 +2,195 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayaan Dhalait</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <meta name="description" content="Ayaan Dhalait is a Computer Programmer, Front-End Developer and Ex-CTO of the Student Initiative Board.">
-    <meta property="og:title" content="Ayaan Dhalait">
-    <meta name="twitter:title" content="Ayaan Dhalait">
-    <meta name="application-name" content="Ayaan Dhalait">
     <meta name="keywords" content="Ayaan Dhalait, developer, programmer, Python, Pygame, web developer, portfolio">
     <meta name="author" content="Ayaan Dhalait">
-    <link rel="canonical" href="https://ayaan.is-a.dev/">
+    <link rel="canonical" href="https://ayaan.is-a.dev">
     <meta property="og:title" content="Ayaan Dhalait">
     <meta property="og:description" content="Developer building games, tools, and web applications.">
     <meta property="og:url" content="https://ayaan.is-a.dev">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://ayaan.is-a.dev/banner.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:site_name" content="Ayaan Dhalait">
     <meta name="twitter:title" content="Ayaan Dhalait">
     <meta name="twitter:description" content="Developer building games and software.">
     <meta name="twitter:image" content="https://ayaan.is-a.dev/banner.png">
     <meta name="twitter:creator" content="@AyaanDhalait">
     <link rel="icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">  
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-        "@type": "Person",
-        "@id": "https://ayaan.is-a.dev/#person",
-        "name": "Ayaan Dhalait",
-        "url": "https://ayaan.is-a.dev/",
-        "image": "https://ayaan.is-a.dev/banner.png",
-        "jobTitle": "Computer Programmer",
-        "birthDate": "2012-08-30",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Student Initiative Board (SIB)",
-            "url": "https://sibglobal.github.io/"
-        },
-        "sameAs": [
-            "https://github.com/AyaanDhalait",
-            "https://www.youtube.com/@AyaanDhalait",
-            "https://x.com/AyaanDhalait",
-            "https://instagram.com/ayaandhalait",
-            "https://dev.to/ayaandhalait"
-        ],
-        "knowsAbout": [
-            "Python",
-            "JavaScript",
-            "HTML",
-            "CSS",
-            "Game Development",
-            "Web Development",
-            "Pygame"
-        ]
-        },
-        {
-        "@type": "WebSite",
-        "@id": "https://ayaan.is-a.dev/#website",
-        "url": "https://ayaan.is-a.dev/",
-        "name": "Ayaan Dhalait",
-        "alternateName": [
-            "Ayaan Dhalait Portfolio",
-            "Ayaan Dhalait Developer"
-        ],
-        "description": "Portfolio of Ayaan Dhalait.",
-        "publisher": {
-            "@id": "https://ayaan.is-a.dev/#person"
-        },
-        "inLanguage": "en"
-        },
-    ]
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ayaan Dhalait",
+      "url": "https://ayaan.is-a.dev",
+      "image": "https://ayaan.is-a.dev/banner.png",
+      "sameAs": [
+        "https://ayaan.is-a.dev",
+        "https://www.youtube.com/@AyaanDhalait",
+        "https://github.com/AyaanDhalait",
+        "https://instagram.com/ayaandhalait",
+        "https://about.me/ayaandhalait",
+        "https://www.wikidata.org/wiki/Q138838768",
+        "https://x.com/AyaanDhalait",
+        "https://dev.to/ayaandhalait",
+        "https://pypi.org/user/AyaanDhalait/",
+        "https://in.pinterest.com/ayaandhalait/"
+      ],
+      "jobTitle": "Computer Programmer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Student Initiative Board (SIB)",
+        "url": "https://sibglobal.github.io/"
+      },
+      "knowsAbout": [
+        "Python",
+        "Game Development",
+        "Web Development",
+        "Pygame",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
     }
     </script>
-</head>
+    </head>
 <body>
-<canvas id="bg"></canvas>
-<div class="grid"></div>
 
-<nav>
-    <a href="#home" class="logo">Ayaan<span>.</span></a>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="text">
+                <a href="/"><span class="name">Ayaan Dhalait</span></a>
+                <p class="subtitle">Web Developer and Ex-CTO</p>
+                <p class="subtitle">You can read my Blogs <a href="/blogs/"> > Here</a></p>
+            </div>
+    
+            <img src="Ayaan.png" alt="Ayaan PFP" class="pfp">
+        </div>
+    </section>
 
-    <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <a href="#contact" class="nav-btn">
-        Let's Connect
-        <i class="fa-solid fa-arrow-right"></i>
-    </a>
-    <div class="hamburger">
-
-    <span></span>
-    <span></span>
-    <span></span>
-
-</div>
-
-
-<div class="mobile-menu">
-
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-
-</div>
-</nav>
-
-
-
-<section class="hero" id="home">
-
-    <div class="hero-left">
-
-        <p class="hero-mini" id="typewriter"></p>
-
-        <h1>
-            Ayaan<br>
-            Dhalait<span>.</span>
-        </h1>
-
-        <p class="hero-desc">
-             I'm Currently Learning C++
+    <section class="about">
+        <h1>About Me</h1>
+        <p class="subtitle">
+            Hey! I'm <strong>Ayaan Dhalait</strong>, A 13-year-old who just happens to be a web developer and former CTO. I started my journey in the world of tech when I was a 5-year-old trying out scratch by MIT and ever since then its been a dream of mine to become a computer scientist by gradutating with a <strong>Computer Science</strong> degree.
         </p>
+    </section>
 
-        <div class="hero-buttons">
+    <section class="socials">
+        <h1>Socials</h1>
+        <a href="https://github.com/AyaanDhalait"> > Github</a><br>
+        <a href="https://linkedin.com/in/ayaan-dhalait"> > LinkedIn</a><br>
+        <a href="https://youtube.com/@AyaanDhalait"> > YouTube</a><br>
+        <a href="https://instagram.com/ayaandhalait"> > Instagram</a><br>
+        <a href="https://x.com/AyaanDhalait"> > X/Twitter</a><br>
+    </section>
 
-            <a href="#projects" class="btn-dark">
-                View Projects
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
+    <section class="exp">
+        <h1>Experience Roadmap</h1>
 
-            <a href="Ayaan_Dhalait_Resume.pdf" download class="btn-light">
-                Resume
-            </a>
-
-        </div>
-
-        <div class="socials">
-
-            <a href="https://github.com/AyaanDhalait"><i class="fa-brands fa-github"></i></a>
-            <a href="https://linkedin.com/in/ayaan-dhalait"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://discord.com/users/1444340744356761781"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://x.com/AyaanDhalait"><i class="fa-brands fa-x-twitter"></i></a>
-
-        </div>
-
-    </div>
-
-
-    <div class="hero-right">
-
-        <div class="avatar-wrap">
-
-            <div class="avatar-ring">
-                <img src="Ayaan.png">
+        <div class="timeline">
+            <div class="item">
+                <div class="year">2017</div>
+                <div class="content">
+                    <h3>Started Using Scratch By MIT</h3>
+                    <p>Started experimenting with Scratch and basic block-based programming.</p>
+                </div>
             </div>
 
-            <div class="tag tag1">C++</div>
-            <div class="tag tag2">Python</div>
-            <div class="tag tag3">Student</div>
-            <div class="tag tag4">Builder</div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="about">
-    <div class="about-container">
-
-        <div class="about-left">
-            <p class="section-mini">• ABOUT ME</p>
-
-            <h2>
-                I try to develop technology that is <span>good</span>.
-            </h2>
-
-            <p class="about-text">
-                I'm Ayaan Dhalait, a student developer who used python and C++ as his main language. I have a passion for building things and learning how they work. I have a thing for technology.
-            </p>
-
-            <p class="about-text">
-                My Dream is to Graduate from university with a Computer Science Degree and become a Computer Scientist.
-            </p>
-
-            <div class="about-stats">
-
-                <div class="stat">
-                    <h3>9+</h3>
-                    <p>Years Coding</p>
+            <div class="item">
+                <div class="year">2020</div>
+                <div class="content">
+                    <h3>Web Development Begins</h3>
+                    <p>Discovered HTML, CSS and JavaScript. Built first static websites and mini projects.</p>
                 </div>
+            </div>
 
-                <div class="stat">
-                    <h3>20+</h3>
-                    <p>Projects Built</p>
+            <div class="item">
+                <div class="year">2022</div>
+                <div class="content">
+                    <h3>Advanced Projects</h3>
+                    <p>Started building interactive web apps and improving UI/UX design skills.</p>
                 </div>
+            </div>
 
-                <div class="stat" id="infinite">
-                    <h3>∞</h3>
-                    <p>Ideas</p>
+            <div class="item">
+                <div class="year">2024</div>
+                <div class="content">
+                    <h3>Became CTO of SIB</h3>
+                    <p>Served as Chief Technology Officer, leading technical direction and projects.</p>
                 </div>
+            </div>
 
+            <div class="item">
+                <div class="year">2026 (Current)</div>
+                <div class="content">
+                    <h3>Full-Stack Growth</h3>
+                    <p>Focused on full-stack development, system design, and production-level projects.</p>
+                </div>
             </div>
         </div>
-
-        <div class="about-right">
-
-            <div class="about-card">
-
-                <div class="profile-ring">
-                    <img src="Ayaan.png">
-                </div>
-
-                <div class="about-badges">
-                    <span>Student Developer</span>
-                    <span>C++ Learner</span>
-                    <span>System Thinker</span>
-                </div>
-
-                <div class="about-line"></div>
-
-                <p class="about-quote">
-                    “Simplicity is Key to Success.”
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<section class="experience" id="experience">
-
-    <p class="section-mini">
-        • EXPERIENCE
-    </p>
-
-    <h2>
-        What I've <span>Built</span>
-    </h2>
-
-    <div class="timeline-line"></div>
-
-    <div class="timeline">
-
-        <div class="step">
-
-            <div class="step-circle">
-                <i class="fa-solid fa-gamepad"></i>
-            </div>
-
-            <h3>2017</h3>
-
-            <p>
-                Started learning Scratch by MIT.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-circle">
-                <i class="fa-brands fa-python"></i>
-            </div>
-
-            <h3>2022</h3>
-
-            <p>
-                Finished Scratch and started learning Python.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-circle">
-                <i class="fa-solid fa-code"></i>
-            </div>
-
-            <h3>2023</h3>
-
-            <p>
-                Started Web Development with HTML, CSS and JavaScript.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-circle">
-                <i class="fa-solid fa-briefcase"></i>
-            </div>
-
-            <h3>2025</h3>
-
-            <p>
-                Got hired as a Software Developer by the Student Initiative Board.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-circle">
-                <i class="fa-solid fa-user-tie"></i>
-            </div>
-
-            <h3>2025</h3>
-
-            <p>
-                Promoted to Chief Technology Officer of the Student Initiative Board.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-circle">
-                <i class="fa-solid fa-rocket"></i>
-            </div>
-
-            <h3>2026</h3>
-
-            <p>
-                Left the Student Initiative Board and started working on personal projects and open source.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="education" id="education">
-
-    <p class="section-mini">
-        • EDUCATION
-    </p>
-
-    <h2>
-        Learning & <span>Growth</span>
-    </h2>
-
-
-    <div class="timeline-line"></div>
-
-
-    <div class="timeline">
-
-        <div class="step">
-
-            <div class="step-circle">
-                <i class="fa-solid fa-school"></i>
-            </div>
-
-            <h3>Tree House</h3>
-
-            <p>
-                KinderGarten and early education.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-circle">
-                <i class="fa-solid fa-school"></i>
-            </div>
-
-            <h3>Hiranandani Foundation School</h3>
-
-            <p>
-                Senior KinderGarten and 1st Grade.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-circle">
-                <i class="fa-solid fa-school"></i>
-            </div>
-
-            <h3>VIBGYOR Group of Schools</h3>
-
-            <p>
-                1st Grade.
-            </p>
-
-        </div>
-
-
-        <div class="step">
-
-            <div class="step-circle">
-                <i class="fa-solid fa-school"></i>
-            </div>
-
-            <h3>The Bishop's School</h3>
-
-            <p>
-                Primary School, Middle School and High School in Computer Science.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section class="certificates" id="certificates">
-
-    <p class="section-mini">
-        • CERTIFICATIONS
-    </p>
-
-    <h2>
-        Verified <span>Achievements</span>
-    </h2>
-
-
-    <div class="certificate-grid">
-
-
-
-        <div class="certificate-card">
-
-            <div class="certificate-preview">
-
-                <img src="certificate.png"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                <div class="certificate-fallback">
-
-                    No Preview
-
-                </div>
-
-
-                <div class="certificate-badge">
-
-                    VERIFIED
-
-                </div>
-
-            </div>
-
-
-
-            <div class="certificate-content">
-
-                <span class="certificate-year">
-
-                    2025
-
-                </span>
-
-
-                <h3>
-                    Certificate of Investiture
-                </h3>
-
-
-                <p>
-                    Leadership recognition awarded for
-                    student co-operation and responsibility.
-                </p>
-
-
-
-                <div class="certificate-meta">
-
-                    <div>
-
-                        <span>
-                            ISSUED BY
-                        </span>
-
-                        <p>
-                            Maharashtra State Co-Op Housing Societies and Appartments Federation Ltd.
-                        </p>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            CATEGORY
-                        </span>
-
-                        <p>
-                            Leadership
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="certificate-tags">
-
-                    <span>Leadership</span>
-                    <span>Communication</span>
-                    <span>Teamwork</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-
-        <div class="certificate-card">
-
-            <div class="certificate-preview">
-
-                <img src="certificate-2.png"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                <div class="certificate-fallback">
-
-                    No Preview
-
-                </div>
-
-
-                <div class="certificate-badge">
-
-                    VERIFIED
-
-                </div>
-
-            </div>
-
-
-
-            <div class="certificate-content">
-
-                <span class="certificate-year">
-
-                    2023
-
-                </span>
-
-
-                <h3>
-                    Robotics Award
-                </h3>
-
-
-                <p>
-                    Grade A certification in robotics
-                    and computational systems.
-                </p>
-
-
-
-                <div class="certificate-meta">
-
-                    <div>
-
-                        <span>
-                            ISSUED BY
-                        </span>
-
-                        <p>
-                            IndiaFIRST Robotics                        </p>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            CATEGORY
-                        </span>
-
-                        <p>
-                            Robotics
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="certificate-tags">
-
-                    <span>Robotics</span>
-                    <span>Logic</span>
-                    <span>Engineering</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-
-        <div class="certificate-card">
-
-            <div class="certificate-preview">
-
-                <img src="certificate-3.png"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                <div class="certificate-fallback">
-
-                    No Preview
-
-                </div>
-
-
-                <div class="certificate-badge">
-
-                    VERIFIED
-
-                </div>
-
-            </div>
-
-
-
-            <div class="certificate-content">
-
-                <span class="certificate-year">
-
-                    2025
-
-                </span>
-
-
-                <h3>
-                    Cyber Champ
-                </h3>
-
-
-                <p>
-                    Participation and contribution
-                    in school cybersecurity event.
-                </p>
-
-
-
-                <div class="certificate-meta">
-
-                    <div>
-
-                        <span>
-                            ISSUED BY
-                        </span>
-
-                        <p>
-                            City Pride School, Pune
-                        </p>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>
-                            CATEGORY
-                        </span>
-
-                        <p>
-                            HACKATHON
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="certificate-tags">
-
-                    <span>Web Development</span>
-                    <span>Teamwork</span>
-                    <span>Hackathon</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<section class="projects" id="projects">
-
-    <p class="section-mini">
-        • FEATURED PROJECTS
-    </p>
-
-    <h2>
-        Things I've <span>Built</span>
-    </h2>
-
-
-    <div class="projects-layout">
-
-
-        <div class="project-card large">
-
-            <div class="project-top">
-
-                <span class="project-type">
-                    CLI APPLICATION
-                </span>
-
-                <span class="project-status">
-                    ● LIVE
-                </span>
-
-            </div>
-
-
-            <h3>
-                Mittens
-            </h3>
-
-
-            <p>
-                A Texting App Built In HTML, CSS, JS and using
-                Firbase by google, Allowing you to talk to 
-                friends and family in a simple and intuitive way.
-            </p>
-
-
-            <div class="project-metrics">
-
-                <div>
-
-                    <span>
-                        YEAR
-                    </span>
-
-                    <p>
-                        2025
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        CODEBASE
-                    </span>
-
-                    <p>
-                        1.5K+ LOC
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        VERSION
-                    </span>
-
-                    <p>
-                        v1.2
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="project-stack">
-
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Firebase</span>
-
-            </div>
-
-
-            <div class="project-actions">
-
-                <a href="https://mittenssocial.github.io/" target="_blank">
-                    View Project
-                </a>
-
-                <a href="https://github.com/mittenssocial/mittenssocial.github.io/" target="_blank">
-                    Source Code
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-
-        <div class="project-card">
-
-            <span class="project-type">
-                python library
-            </span>
-
-            <h3>
-                pplayer
-            </h3>
-
-            <p>
-                A minimal library to create playble entities in pygame.
-            </p>
-
-
-            <div class="project-stack">
-
-                <span>Python</span>
-                <span>Pygame</span>
-
-            </div>
-
-        </div>
-
-
-
-
-        <div class="project-card">
-
-            <span class="project-type">
-                CLI Dev Tool
-            </span>
-
-            <h3>
-                dhctl
-            </h3>
-
-            <p>
-                a lightweight CLI tool made for Developers.
-            </p>
-
-
-            <div class="project-stack">
-
-                <span>Python</span>
-                <span>CLI</span>
-
-            </div>
-
-        </div>
-
-
-
-
-        <div class="project-card">
-
-            <span class="project-type">
-                Python Library
-            </span>
-
-            <h3>
-                pyKp130
-            </h3>
-
-            <p>
-                A virtual science lab in python.
-            </p>
-
-
-            <div class="project-stack">
-
-                <span>Python</span>
-                <span>CSV</span>
-
-            </div>
-
-        </div>
-
-        <div class="project-card">
-
-            <span class="project-type">
-                Python Library
-            </span>
-
-            <h3>
-                DhEngine
-            </h3>
-
-            <p>
-                A python game development library built on top of pygame.
-            </p>
-
-
-            <div class="project-stack">
-
-                <span>Python</span>
-                <span>Pygame</span>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<section class="skills" id="skills">
-
-    <p class="section-mini">
-        • TECH STACK
-    </p>
-
-    <h2>
-        Systems I <span>Use</span>
-    </h2>
-
-
-    <div class="stack-grid">
-
-
-        <div class="stack-group">
-
-            <h3>Languages</h3>
-
-            <div class="stack-items">
-
-                <div class="stack-item">
-                    <i class="devicon-cplusplus-plain"></i>
-                    <span>C++</span>
-                </div>
-
-                <div class="stack-item">
-                    <i class="devicon-python-plain"></i>
-                    <span>Python</span>
-                </div>
-
-                <div class="stack-item">
-                    <i class="devicon-javascript-plain"></i>
-                    <span>JavaScript</span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="stack-group">
-
-            <h3>Frontend</h3>
-
-            <div class="stack-items">
-
-                <div class="stack-item">
-                    <i class="devicon-html5-plain"></i>
-                    <span>HTML</span>
-                </div>
-
-                <div class="stack-item">
-                    <i class="devicon-css3-plain"></i>
-                    <span>CSS</span>
-                </div>
-
-                <div class="stack-item">
-                    <i class="devicon-javascript-plain"></i>
-                    <span>DOM</span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="stack-group">
-
-            <h3>Version Control</h3>
-
-            <div class="stack-items">
-
-                <div class="stack-item">
-                    <i class="devicon-git-plain"></i>
-                    <span>Git</span>
-                </div>
-
-                <div class="stack-item">
-                    <i class="devicon-github-original"></i>
-                    <span>GitHub</span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="stack-group">
-
-            <h3>Systems</h3>
-
-            <div class="stack-items">
-
-                <div class="stack-item">
-                    <i class="devicon-windows8-original"></i>
-                    <span>Windows</span>
-                </div>
-
-                <div class="stack-item">
-                    <i class="devicon-bash-plain"></i>
-                    <span>Bash</span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="stack-group">
-
-            <h3>Tools</h3>
-
-            <div class="stack-items">
-
-                <div class="stack-item">
-                    <i class="devicon-vscode-plain"></i>
-                    <span>VS Code</span>
-                </div>
-
-                <div class="stack-item">
-                    <i class="devicon-chrome-plain"></i>
-                    <span>Browser DevTools</span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="stack-group">
-
-            <h3>Interests</h3>
-
-            <div class="stack-items">
-
-                <div class="stack-item">
-                    <i class="fa-solid fa-microchip"></i>
-                    <span>Low Level</span>
-                </div>
-
-                <div class="stack-item">
-                    <i class="fa-solid fa-diagram-project"></i>
-                    <span>System Design</span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<section class="contact" id="contact">
-
-    <div class="contact-info">
-
-        <p class="section-mini">
-            • CONTACT
-        </p>
-
-        <h2>
-            Let's Get in <span>Touch</span>.
-        </h2>
-
-        <p class="contact-desc">
-            Want to talk to me about something?
-        </p>
-
-
-        <div class="contact-meta">
-
-            <div class="meta-card">
-
-                <i class="fa-solid fa-envelope"></i>
-
-                <div>
-
-                    <span>Email</span>
-
-                    <p>ayaan@ayaan.is-a.dev</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="meta-card">
-
-                <i class="fa-brands fa-linkedin"></i>
-
-                <div>
-
-                    <span>LinkedIn</span>
-
-                    <p>ayaan-dhalait</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="meta-card">
-
-                <i class="fa-brands fa-x-twitter"></i>
-
-                <div>
-
-                    <span>X / Twitter</span>
-
-                    <p>@AyaanDhalait</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <form class="contact-form"
-    id="contactForm">
-
-        <div class="input-group">
-
-            <label>Your Name</label>
-
-            <input
-            type="text"
-            name="name"
-            required>
-
-        </div>
-
-
-        <div class="input-group">
-
-            <label>Email Address</label>
-
-           <input
-  type="email"
-  name="email"
-  pattern=".{6,}@.*"
-  required>
-
-        </div>
-
-
-        <div class="input-group">
-
-            <label>Message</label>
-
+    </section>
+
+    <section class="projects">
+        <h1>Projects</h1>
+        <div id="project-list"></div>
+    </section>
+    <section class="contact">
+        <h1>Contact Me</h1>
+    
+        <form action="https://formspree.io/f/xwvavoee" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+    
+            <input type="email" name="email" placeholder="Your Email" required>
+    
             <textarea
-            name="message"
-            required></textarea>
-
-        </div>
-
-
-        <button
-        type="submit"
-        id="sendBtn">
-
-            <span id="btnText">
-
-                Send Message
-
-            </span>
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </button>
-
-    </form>
-
-
-
-    <div class="success-popup"
-    id="successPopup">
-
-        <div class="popup-card">
-
-            <i class="fa-solid fa-circle-check"></i>
-
-            <h3>
-                Message Sent.
-            </h3>
-
-            <p>
-                Thanks for reaching out.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<footer>
-
-    <div class="footer-glow"></div>
-
-
-    <p class="footer-mini">
-        • FINAL SECTION
-    </p>
-
-
-    <h2>
-        Ideas Into <span>Reality.</span>
-    </h2>
-
-
-    <p class="footer-desc">
-        I usually am not open to freelance work.
-    </p>
-
-
-
-    <div class="footer-cta">
-
-        <a href="#contact" class="footer-primary">
-
-            Contact Me
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-
-        <a href="Ayaan_Dhalait_Resume.pdf" download class="btn-light">
-
-            Download Resume
-
-        </a>
-
-    </div>
-
-
-
-    <div class="footer-socials">
-
-        <a href="https://github.com/AyaanDhalait">
-            <i class="fa-brands fa-github"></i>
-        </a>
-
-        <a href="https://linkedin.com/in/ayaan-dhalait">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-
-        <a href="https://x.com/AyaanDhalait">
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
-
-        <a href="https://discord.com/users/1444340744356761781">
-            <i class="fa-brands fa-discord"></i>
-        </a>
-
-    </div>
-
-
-
-<div class="footer-status">
-
-    <div class="status-item">
-
-        <span>
-            Currently
-        </span>
-
-        <p>
-            Year 9 Student
-        </p>
-
-    </div>
-
-
-    <div class="status-divider"></div>
-
-
-    <div class="status-item">
-
-        <span>
-            Building
-        </span>
-
-        <p>
-            C++ Applications
-        </p>
-
-    </div>
-
-
-    <div class="status-divider"></div>
-
-
-    <div class="status-item">
-
-        <span>
-            Focus
-        </span>
-
-        <p>
-            Systems Programming
-        </p>
-
-    </div>
-
-
-    <div class="status-divider"></div>
-
-
-    <div class="status-item">
-
-        <span>
-            Next Goal
-        </span>
-
-        <p>
-            Ship Products
-        </p>
-
-    </div>
-
-</div>
-
-
-
-    <div class="footer-line"></div>
-
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Ayaan Dhalait.
-        </p>
-
-        <p>
-            All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-<script src="script.js"></script>
+                name="message"
+                placeholder="Your Message"
+                rows="6"
+                required
+            ></textarea>
+    
+            <button type="submit"> > Send Message</button>
+        </form>
+    </section><br><br>
+
+    <hr width="400px">
+
+    <footer>
+        &copy; Ayaan Dhalait. All Rights Reserved.
+    </footer>
+
+    <script>
+        const username = "AyaanDhalait";
+        const repoContainer = document.getElementById("project-list");
+
+        fetch(`https://api.github.com/users/${username}/repos`)
+            .then(res => res.json())
+            .then(repos => {
+                repos
+                    .filter(r => !r.fork)
+                    .sort((a, b) => b.stargazers_count - a.stargazers_count)
+                    .forEach(repo => {
+                        const card = document.createElement("div");
+                        card.className = "project-card";
+                        card.innerHTML = `
+                            <h3><a href="${repo.html_url}" target="_blank"> > ${repo.name}</a></h3>
+                            <p>${repo.description || "No description provided."}</p>
+                            <small class="stars">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"/>
+    </svg>
+    ${repo.stargazers_count}
+</small>
+                        `;
+                        repoContainer.appendChild(card);
+                    });
+            });
+    </script>
 
 </body>
 </html>
