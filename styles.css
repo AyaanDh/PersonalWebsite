@@ -1364,6 +1364,7 @@ nav a{
 
 .footer-left {
     max-width: 400px;
+    text-align: left !important;
 }
 
 .footer-name {
