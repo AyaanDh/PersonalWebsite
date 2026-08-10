@@ -1,308 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayaan Dhalait</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        body {
+            margin: 0;
+            background: #101010;
+            color: #ddd;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
 
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap" rel="stylesheet">
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    <link rel="stylesheet" href="styles.css">
+        .container {
+            width: 650px;
+            max-width: calc(100% - 30px);
+            margin: 55px auto;
+        }
+
+        /* HEADER */
+
+        header {
+            padding-bottom: 15px;
+            border-bottom: 1px solid #292929;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 52px;
+            font-weight: 300;
+            letter-spacing: -2px;
+            color: #eee;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            color: #777;
+        }
+
+        .orange {
+            color: #ff6a00;
+        }
+
+        /* NAV */
+
+        nav {
+            text-align: center;
+            margin: 17px 0;
+        }
+
+        nav a {
+            color: #bbb;
+            margin: 0 12px;
+        }
+
+        nav a:hover {
+            color: #ff6a00;
+        }
+
+        /* TITLES */
+
+        .title {
+            text-align: center;
+            color: #eee;
+            margin: 35px 0 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* FEATURED PROJECTS */
+
+        .featured {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .featured a {
+            height: 125px;
+            background: #080808;
+            border: 1px solid #151515;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: 0.2s;
+        }
+
+        .featured a:hover {
+            border-color: #ff6a00;
+            transform: translateY(-3px);
+        }
+
+        .featured h3 {
+            margin: 0;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #eee;
+        }
+
+        .featured p {
+            margin: 6px 0 0;
+            color: #666;
+            font-size: 12px;
+        }
+
+        /* PROJECT LIST */
+
+        .project-list {
+            margin-top: 12px;
+        }
+
+        .project-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 9px 10px;
+            border-bottom: 1px solid #292929;
+            color: #888;
+        }
+
+        .project-row:hover {
+            color: #eee;
+        }
+
+        .project-row span:last-child {
+            color: #555;
+            text-align: right;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .skill {
+            padding: 6px 10px;
+            background: #181818;
+            border: 1px solid #242424;
+            border-radius: 5px;
+            color: #999;
+        }
+
+        /* TIMELINE */
+
+        .timeline {
+            position: relative;
+            margin: 30px auto;
+            width: 500px;
+            max-width: 100%;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: #444;
+        }
+
+        .event {
+            position: relative;
+            width: 50%;
+            padding: 8px 25px;
+            margin-bottom: 8px;
+        }
+
+        .event.left {
+            text-align: right;
+            left: 0;
+        }
+
+        .event.right {
+            margin-left: 50%;
+        }
+
+        .event::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            width: 9px;
+            height: 9px;
+            background: #101010;
+            border: 1px solid #aaa;
+            border-radius: 50%;
+        }
+
+        .event.left::after {
+            right: -5px;
+        }
+
+        .event.right::after {
+            left: -5px;
+        }
+
+        .event h3 {
+            margin: 0;
+            font-size: 13px;
+            font-weight: normal;
+            color: #ddd;
+        }
+
+        .event p {
+            margin: 3px 0;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .year {
+            color: #ff6a00;
+            font-size: 12px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            text-align: center;
+            color: #777;
+            line-height: 1.7;
+            max-width: 550px;
+            margin: 20px auto;
+        }
+
+        /* LINKS */
+
+        .links {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .links a {
+            color: #888;
+            margin: 0 12px;
+        }
+
+        .links a:hover {
+            color: #ff6a00;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 60px;
+            padding: 20px 0;
+            border-top: 1px solid #292929;
+            text-align: center;
+            color: #555;
+            font-size: 12px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .container {
+                margin-top: 30px;
+            }
+
+            header h1 {
+                font-size: 42px;
+            }
+
+            .featured {
+                grid-template-columns: 1fr;
+            }
+
+            .featured a {
+                height: 100px;
+            }
+
+            .timeline {
+                width: 100%;
+            }
+
+            .event {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <main class="container">
+<div class="container">
 
-        <section class="hero">
+    <header>
 
-            <span class="badge">SOFTWARE DEVELOPER</span>
+        <h1>
+            ayaan<span class="orange">.</span>
+        </h1>
 
-            <h1>
-                Hi, I'm <span class="accent">Ayaan Dhalait</span>.
-            </h1>
+        <p>
+            Software developer, programmer and student
+        </p>
 
-            <p class="subtitle">
-                Software Developer and Student in the UK
+    </header>
+
+
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#timeline">Timeline</a>
+        <a href="https://github.com/ayaandh">GitHub</a>
+    </nav>
+
+
+    <!-- FEATURED PROJECTS -->
+
+    <h3 class="title">
+        My Projects
+    </h3>
+
+    <div class="featured">
+
+        <a href="https://github.com/ayaandh/dhctl-source-code">
+
+            <h3>dhctl</h3>
+
+            <p>
+                Developer CLI tool
             </p>
 
-            <p class="description">
-                I have a hobby to code unusually satisfying projects that do nothing but amaze me by what can be done with code. I've tried game development, app development and desktop devewlopment. In the end I tend to stick with desktop development and some web development withg Python, C++ and HTML/CSS/JavaScript.
+        </a>
+
+
+        <a href="https://github.com/ayaandh/Library-Mangement-System">
+
+            <h3>Library Manager</h3>
+
+            <p>
+                C++ project
             </p>
 
-            <div class="buttons">
+        </a>
 
-                <a href="#projects" class="primary">
-                    View Projects
-                </a>
 
-                <a href="https://github.com/ayaandh" class="secondary" target="_blank">
-                    GitHub
-                </a>
+        <a href="https://github.com/ayaandh/pplayer">
 
-            </div>
+            <h3>pplayer</h3>
 
-        </section>
+            <p>
+                Python + Pygame
+            </p>
 
-        <section id="projects" class="projects">
-
-            <h2>Featured Projects</h2>
-
-<div class="grid">
-
-    <a class="card" href="https://github.com/ayaandh/pykp130" target="_blank">
-        <span class="language">Python</span>
-
-        <h3>pykp130</h3>
-
-        <p>
-            An interactive science platform built with Python,
-            designed for exploring simulations and experiments.
-        </p>
-    </a>
-
-
-    <a class="card" href="https://github.com/ayaandh/DhEngine" target="_blank">
-        <span class="language">Python • Game Dev</span>
-
-        <h3>DhEngine</h3>
-
-        <p>
-            A custom game engine project built to explore graphics,
-            game architecture, and development workflows.
-        </p>
-    </a>
-
-
-    <a class="card" href="https://github.com/ayaandh/pplayer" target="_blank">
-        <span class="language">Python Library</span>
-
-        <h3>pplayer</h3>
-
-        <p>
-            A Python library project focused on creating reusable
-            tools and improving developer productivity.
-        </p>
-    </a>
-
-
-    <a class="card" href="https://github.com/ayaandh/TimeToGo" target="_blank">
-        <span class="language">Python • CLI</span>
-
-        <h3>TimeToGo</h3>
-
-        <p>
-            A command-line tool that combines automation,
-            data processing, and useful everyday utilities.
-        </p>
-    </a>
-
-
-    <a class="card" href="https://github.com/ayaandh/Dhctl" target="_blank">
-        <span class="language">Developer Tools</span>
-
-        <h3>Dhctl</h3>
-
-        <p>
-            A developer-focused CLI tool built to simplify
-            workflows and automate tasks.
-        </p>
-    </a>
-
-
-    <a class="card" href="https://github.com/ayaandh/Mittens" target="_blank">
-        <span class="language">Application</span>
-
-        <h3>Mittens</h3>
-
-        <p>
-            A messaging application experiment exploring
-            communication systems and app development.
-        </p>
-    </a>
-
-</div>
-        </section>
-
-<section class="skills">
-
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-
-        <div class="skill-card">
-
-            <h3>Languages</h3>
-
-            <div class="tags">
-                <span>Python</span>
-                <span>C++</span>
-                <span>JavaScript</span>
-                <span>HTML</span>
-                <span>CSS</span>
-            </div>
-
-        </div>
-
-
-        <div class="skill-card">
-
-            <h3>Libraries & Frameworks</h3>
-
-            <div class="tags">
-                <span>Pygame</span>
-                <span>Flask</span>
-                <span>Three.js</span>
-            </div>
-
-        </div>
-
-
-        <div class="skill-card">
-
-            <h3>Tools</h3>
-
-            <div class="tags">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>VS Code</span>
-                <span>Neovim</span>
-            </div>
-
-        </div>
-
-
-        <div class="skill-card">
-
-            <h3>Building</h3>
-
-            <div class="tags">
-                <span>Game Development</span>
-                <span>CLI Tools</span>
-                <span>Open Source</span>
-                <span>Creative Coding</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-        
-<section class="github">
-
-    <h2>Developer Activity</h2>
-
-    <div class="github-dashboard">
-
-
-        <div class="profile-card">
-
-            <img id="avatar">
-
-            <div>
-
-                <h3 id="username">
-                    Ayaan Dhalait
-                </h3>
-
-                <p id="bio">
-                    Loading profile...
-                </p>
-
-
-                <a href="https://github.com/ayaandh" target="_blank">
-                    GitHub Profile →
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="stats-grid">
-
-
-            <div class="stat">
-                <strong id="repos">0</strong>
-                <span>Repositories</span>
-            </div>
-
-
-            <div class="stat">
-                <strong id="stars">0</strong>
-                <span>Total Stars</span>
-            </div>
-
-
-            <div class="stat">
-                <strong id="forks">0</strong>
-                <span>Forks</span>
-            </div>
-
-
-            <div class="stat">
-                <strong id="followers">0</strong>
-                <span>Followers</span>
-            </div>
-
-
-        </div>
-
-
-
-        <div class="languages">
-
-            <h3>Top Languages</h3>
-
-            <div id="language-list"></div>
-
-        </div>
-
-
-
-        <div class="recent">
-
-            <h3>Recently Updated</h3>
-
-            <div id="recent-projects"></div>
-
-        </div>
-
+        </a>
 
     </div>
 
 
-</section>
+    <!-- MORE PROJECTS -->
+
+    <div class="project-list">
+
+        <a class="project-row"
+           href="https://github.com/ayaandh/EncryptionSystem">
+
+            <span>EncryptionSystem</span>
+            <span>C++</span>
+
+        </a>
 
 
-<footer>
+        <a class="project-row"
+           href="https://github.com/ayaandh/Basic-Negotiation-System">
 
-    <p>
-        © 2026 Ayaan Dhalait
+            <span>Basic Negotiation System</span>
+            <span>C++</span>
+
+        </a>
+
+
+        <a class="project-row"
+           href="https://github.com/ayaandh/Pillow">
+
+            <span>Pillow</span>
+            <span>Python</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <h3 class="title" id="about">
+        About Me
+    </h3>
+
+    <p class="about">
+
+        I'm Ayaan, a programmer interested in software development
+        and computer science. I like building projects, learning how
+        things work and improving my code.
+
+        <br><br>
+
+        I'm currently focusing more on C++ and learning more about
+        software and computer science.
+
     </p>
 
-    <div class="footer-links">
 
-        <a href="https://github.com/ayaandh" target="_blank">
+    <!-- SKILLS -->
+
+    <h3 class="title">
+        What I Use
+    </h3>
+
+    <div class="skills">
+
+        <span class="skill">C++</span>
+        <span class="skill">Python</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Git</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">Pygame</span>
+        <span class="skill">Flask</span>
+
+    </div>
+
+
+    <!-- TIMELINE -->
+
+    <h3 class="title" id="timeline">
+        Projects Timeline
+    </h3>
+
+    <p class="subtitle">
+        what I've been building
+    </p>
+
+    <div class="timeline">
+
+        <div class="event left">
+
+            <span class="year">2026</span>
+
+            <h3>dhctl</h3>
+
+            <p>
+                Developer CLI tool
+            </p>
+
+        </div>
+
+
+        <div class="event right">
+
+            <span class="year">2026</span>
+
+            <h3>Library Management System</h3>
+
+            <p>
+                C++ project
+            </p>
+
+        </div>
+
+
+        <div class="event left">
+
+            <span class="year">2026</span>
+
+            <h3>pplayer</h3>
+
+            <p>
+                Pygame library
+            </p>
+
+        </div>
+
+
+        <div class="event right">
+
+            <span class="year">2026</span>
+
+            <h3>EncryptionSystem</h3>
+
+            <p>
+                C++ experiment
+            </p>
+
+        </div>
+
+
+        <div class="event left">
+
+            <span class="year">2025</span>
+
+            <h3>Python Projects</h3>
+
+            <p>
+                Learning and experimenting
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- LINKS -->
+
+    <h3 class="title">
+        Find Me
+    </h3>
+
+    <div class="links">
+
+        <a href="https://github.com/ayaandh">
             GitHub
         </a>
 
-        <a href="https://linkedin.com" target="_blank">
-            LinkedIn
-        </a>
-
-        <a href="mailto:mr.dhalait@gmail.com">
-            Email
+        <a href="https://ayaan.is-a.dev">
+            Website
         </a>
 
     </div>
 
-</footer>
-    </main>
-<script src="script.js"></script>
+
+    <footer>
+        © 2026 Ayaan Dhalait
+    </footer>
+
+</div>
+
 </body>
+
 </html>
