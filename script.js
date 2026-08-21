@@ -22,35 +22,30 @@ async function loadContributions() {
         const total = data.total["2026"] ?? 0;
 
         contributionCount.innerHTML =
-            `<strong>${total}</strong> Contributions in 2026`;
+            `<strong>${total}</strong> contributions in 2026`;
 
         const start = new Date("2025-12-28T00:00:00");
         const end = new Date("2027-01-02T00:00:00");
 
-        const dates = [];
+        graph.innerHTML = "";
 
         for (
             let date = new Date(start);
             date <= end;
             date.setDate(date.getDate() + 1)
         ) {
-            dates.push(new Date(date));
-        }
-
-        graph.innerHTML = "";
-
-        dates.forEach(date => {
-            const iso = date.toISOString().split("T")[0];
+            const currentDate = new Date(date);
             const day = document.createElement("div");
 
             day.className = "day";
 
-            if (date.getFullYear() !== 2026) {
+            if (currentDate.getFullYear() !== 2026) {
                 day.style.visibility = "hidden";
                 graph.appendChild(day);
-                return;
+                continue;
             }
 
+            const iso = currentDate.toISOString().split("T")[0];
             const contribution = contributionData.get(iso);
 
             day.dataset.level = contribution?.level ?? 0;
@@ -58,11 +53,14 @@ async function loadContributions() {
             day.addEventListener("mouseenter", event => {
                 const count = contribution?.count ?? 0;
 
-                const formattedDate = date.toLocaleDateString("en-GB", {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric"
-                });
+                const formattedDate = currentDate.toLocaleDateString(
+                    "en-GB",
+                    {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric"
+                    }
+                );
 
                 tooltip.textContent =
                     `${count} contribution${count === 1 ? "" : "s"} on ${formattedDate}`;
@@ -82,16 +80,13 @@ async function loadContributions() {
             });
 
             graph.appendChild(day);
-        });
+        }
 
         createMonthLabels();
 
     } catch (error) {
         console.error(error);
-
-        contributionCount.textContent =
-            "Unable to load contributions";
-
+        contributionCount.textContent = "GitHub activity unavailable";
         graph.innerHTML = "";
     }
 }
@@ -110,10 +105,6 @@ function createMonthLabels() {
             continue;
         }
 
-        const month = date.toLocaleDateString("en-GB", {
-            month: "short"
-        });
-
         const key = `${date.getFullYear()}-${date.getMonth()}`;
 
         if (monthsSeen.has(key)) {
@@ -125,7 +116,10 @@ function createMonthLabels() {
         const label = document.createElement("span");
 
         label.className = "month-label";
-        label.textContent = month;
+        label.textContent = date.toLocaleDateString("en-GB", {
+            month: "short"
+        });
+
         label.style.left = `${week * 17}px`;
 
         months.appendChild(label);

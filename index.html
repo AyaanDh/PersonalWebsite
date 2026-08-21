@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,18 +17,31 @@
     <main class="container">
 
         <header class="hero">
-            <div>
+            <div class="hero-copy">
                 <p class="eyebrow">SOFTWARE DEVELOPER</p>
                 <h1><span>Ayaan</span> Dhalait</h1>
                 <p class="hero-description">
                     Self-taught programmer, Year 10 student, and someone who spends an unreasonable amount of time writing code.
                 </p>
+
+                <div class="hero-tags" aria-label="Technical interests">
+                    <span>Python</span>
+                    <span>C++</span>
+                    <span>Systems</span>
+                    <span>Web</span>
+                </div>
             </div>
 
-            <div class="hero-links">
-                <a href="https://github.com/ayaandh" target="_blank">GitHub ↗</a>
-                <a href="https://linkedin.com/in/ayaan-dhalait" target="_blank">LinkedIn ↗</a>
-            </div>
+            <aside class="hero-card" aria-label="Quick profile info">
+                <span class="card-label">Based in</span>
+                <strong>London, UK</strong>
+                <p>Building tools, systems, and ideas from first principles.</p>
+
+                <div class="hero-links">
+                    <a href="https://github.com/ayaandh" target="_blank">GitHub ↗</a>
+                    <a href="https://linkedin.com/in/ayaan-dhalait" target="_blank">LinkedIn ↗</a>
+                </div>
+            </aside>
         </header>
 
         <div class="divider"></div>
@@ -38,15 +52,36 @@
                 <h2>About me</h2>
             </div>
 
-            <div class="about-content">
-                <div class="location">
-                    <img src="gps.png" alt="">
-                    <span>London, United Kingdom</span>
+            <div class="about-layout">
+                <div class="about-card">
+                    <div class="location">
+                        <img src="gps.png" alt="Location marker">
+                        <span>London, United Kingdom</span>
+                    </div>
+
+                    <div class="mini-stats">
+                        <div>
+                            <span class="stat-label">Focus</span>
+                            <strong>Software</strong>
+                        </div>
+                        <div>
+                            <span class="stat-label">Study</span>
+                            <strong>Year 10</strong>
+                        </div>
+                    </div>
                 </div>
 
-                <p>
-                    I am a self-taught programmer and Year 10 student. I taught myself Python and C++ and I love mathematics, computer science, and building things from scratch.
-                </p>
+                <div class="about-content">
+                    <p>
+                        I am a self-taught programmer and Year 10 student. I taught myself Python and C++ and I love mathematics, computer science, and building things from scratch.
+                    </p>
+
+                    <ul class="about-points">
+                        <li>Self-driven learner</li>
+                        <li>Problem-solving first</li>
+                        <li>Builds tools for real use</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
