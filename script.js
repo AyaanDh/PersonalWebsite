@@ -1,146 +1,135 @@
-const username = "ayaandh";
+const graph = document.getElementById("contributionGraph");
+const contributionCount = document.getElementById("contributionCount");
+const tooltip = document.getElementById("tooltip");
+const months = document.getElementById("months");
 
-async function loadGithubDashboard(){
-
-    const user = await fetch(
-        `https://api.github.com/users/${username}`
-    ).then(r => r.json());
-
-
-    document.querySelector("#avatar").src = user.avatar_url;
-
-    document.querySelector("#username").textContent =
-        user.name || username;
-
-    document.querySelector("#bio").textContent =
-        user.bio || "Building software and open-source projects.";
-
-
-    const repos = await fetch(
-        `https://api.github.com/users/${username}/repos?per_page=100`
-    ).then(r => r.json());
-
-
-    let stars = 0;
-    let forks = 0;
-    let languages = {};
-
-
-    repos.forEach(repo => {
-
-        stars += repo.stargazers_count;
-
-        forks += repo.forks_count;
-
-
-        if(repo.language){
-
-            languages[repo.language] =
-                (languages[repo.language] || 0) + 1;
-
-        }
-
-    });
-
-
-    document.querySelector("#repos").textContent =
-        user.public_repos;
-
-    document.querySelector("#followers").textContent =
-        user.followers;
-
-    document.querySelector("#stars").textContent =
-        stars;
-
-    document.querySelector("#forks").textContent =
-        forks;
-
-
-    const sortedLanguages = Object.entries(languages)
-        .sort((a,b)=>b[1]-a[1])
-        .slice(0,5);
-
-
-    const totalLanguages = sortedLanguages.reduce(
-        (sum, lang)=>sum + lang[1],
-        0
-    );
-
-
-    const languageContainer =
-        document.querySelector("#language-list");
-
-
-    languageContainer.innerHTML = "";
-
-
-    sortedLanguages.forEach(lang => {
-
-        const percentage = Math.round(
-            (lang[1] / totalLanguages) * 100
+async function loadContributions() {
+    try {
+        const response = await fetch(
+            "https://github-contributions-api.jogruber.de/v4/ayaandh?y=2026"
         );
 
+        if (!response.ok) {
+            throw new Error("Failed to fetch GitHub data");
+        }
 
-        languageContainer.innerHTML += `
+        const data = await response.json();
 
-        <div class="language-row">
+        const contributionData = new Map(
+            data.contributions.map(day => [day.date, day])
+        );
 
-            <div class="language-name">
+        const total = data.total["2026"] ?? 0;
 
-                <span>${lang[0]}</span>
+        contributionCount.innerHTML =
+            `<strong>${total}</strong> Contributions in 2026`;
 
-                <span>${percentage}%</span>
+        const start = new Date("2025-12-28T00:00:00");
+        const end = new Date("2027-01-02T00:00:00");
 
-            </div>
+        const dates = [];
 
+        for (
+            let date = new Date(start);
+            date <= end;
+            date.setDate(date.getDate() + 1)
+        ) {
+            dates.push(new Date(date));
+        }
 
-            <div class="bar">
+        graph.innerHTML = "";
 
-                <div style="width:${percentage}%"></div>
+        dates.forEach(date => {
+            const iso = date.toISOString().split("T")[0];
+            const day = document.createElement("div");
 
-            </div>
+            day.className = "day";
 
-        </div>
+            if (date.getFullYear() !== 2026) {
+                day.style.visibility = "hidden";
+                graph.appendChild(day);
+                return;
+            }
 
-        `;
+            const contribution = contributionData.get(iso);
 
-    });
+            day.dataset.level = contribution?.level ?? 0;
 
+            day.addEventListener("mouseenter", event => {
+                const count = contribution?.count ?? 0;
 
-    const recentContainer =
-        document.querySelector("#recent-projects");
+                const formattedDate = date.toLocaleDateString("en-GB", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric"
+                });
 
+                tooltip.textContent =
+                    `${count} contribution${count === 1 ? "" : "s"} on ${formattedDate}`;
 
-    recentContainer.innerHTML = "";
+                tooltip.style.display = "block";
+                tooltip.style.left = `${event.clientX}px`;
+                tooltip.style.top = `${event.clientY}px`;
+            });
 
+            day.addEventListener("mousemove", event => {
+                tooltip.style.left = `${event.clientX}px`;
+                tooltip.style.top = `${event.clientY}px`;
+            });
 
-    repos
-        .sort(
-            (a,b)=>
-            new Date(b.updated_at)
-            -
-            new Date(a.updated_at)
-        )
-        .slice(0,4)
-        .forEach(repo => {
+            day.addEventListener("mouseleave", () => {
+                tooltip.style.display = "none";
+            });
 
-            recentContainer.innerHTML += `
-
-            <a href="${repo.html_url}" target="_blank">
-
-                <h4>${repo.name}</h4>
-
-                <p>
-                    ${repo.description || "No description available."}
-                </p>
-
-            </a>
-
-            `;
-
+            graph.appendChild(day);
         });
 
+        createMonthLabels();
+
+    } catch (error) {
+        console.error(error);
+
+        contributionCount.textContent =
+            "Unable to load contributions";
+
+        graph.innerHTML = "";
+    }
 }
 
+function createMonthLabels() {
+    months.innerHTML = "";
 
-loadGithubDashboard();
+    const start = new Date("2025-12-28T00:00:00");
+    const monthsSeen = new Set();
+
+    for (let week = 0; week < 54; week++) {
+        const date = new Date(start);
+        date.setDate(start.getDate() + week * 7);
+
+        if (date.getFullYear() !== 2026) {
+            continue;
+        }
+
+        const month = date.toLocaleDateString("en-GB", {
+            month: "short"
+        });
+
+        const key = `${date.getFullYear()}-${date.getMonth()}`;
+
+        if (monthsSeen.has(key)) {
+            continue;
+        }
+
+        monthsSeen.add(key);
+
+        const label = document.createElement("span");
+
+        label.className = "month-label";
+        label.textContent = month;
+        label.style.left = `${week * 17}px`;
+
+        months.appendChild(label);
+    }
+}
+
+loadContributions();
