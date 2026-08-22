@@ -7,186 +7,386 @@
     <title>Ayaan Dhalait</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <main class="container">
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
 
-        <header class="hero">
-            <div>
-                <p class="eyebrow">SOFTWARE DEVELOPER</p>
-                <h1><span>Ayaan</span> Dhalait</h1>
-                <p class="hero-description">
-                    Self-taught programmer, Year 10 student, and someone who spends an unreasonable amount of time writing code.
-                </p>
+<header class="navbar">
+    <div class="nav-inner">
+        <a class="brand" href="#">
+            <span class="brand-mark">A</span>
+            <span>Ayaan Dhalait</span>
+        </a>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#activity">Activity</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="nav-github" href="https://github.com/ayaandh" target="_blank" rel="noopener noreferrer">
+            GitHub <span>↗</span>
+        </a>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="hero-grid"></div>
+
+        <div class="hero-content">
+            <div class="hero-label">
+                <span></span>
+                SOFTWARE DEVELOPER
             </div>
 
-            <div class="hero-links">
-                <a href="https://github.com/ayaandh" target="_blank">GitHub ↗</a>
-                <a href="https://linkedin.com/in/ayaan-dhalait" target="_blank">LinkedIn ↗</a>
+            <h1>
+                <span>Ayaan</span>
+                Dhalait
+            </h1>
+
+            <p class="hero-description">
+                Self-taught programmer, Year 10 student, and someone who spends an unreasonable amount of time writing code.
+            </p>
+
+            <div class="hero-actions">
+                <a class="primary-button" href="https://github.com/ayaandh" target="_blank" rel="noopener noreferrer">
+                    View GitHub
+                    <span>↗</span>
+                </a>
+
+                <a class="secondary-button" href="#projects">
+                    Explore projects
+                    <span>↓</span>
+                </a>
             </div>
-        </header>
+        </div>
 
-        <div class="divider"></div>
+        <div class="hero-visual">
+            <div class="visual-ring ring-one"></div>
+            <img src="Ayaan.png" alt="Profile Picture" class="profile-image">
+            <div class="visual-ring ring-two"></div>
 
-        <section class="section about">
-            <div class="section-heading">
-                <span class="section-number">01</span>
-                <h2>About me</h2>
+        </div>
+
+        <div class="hero-bottom">
+            <span>SCROLL TO EXPLORE</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <section class="about section-shell" id="about">
+        <div class="section-label">
+            <span>01</span>
+            ABOUT ME
+        </div>
+
+        <div class="about-layout">
+            <div class="about-title">
+                <p>INTRODUCTION</p>
+                <h2>About<br><span>Me</span></h2>
             </div>
 
-            <div class="about-content">
+            <div class="about-main">
                 <div class="location">
-                    <img src="gps.png" alt="">
-                    <span>London, United Kingdom</span>
+                    <div class="location-icon">
+                        <img src="gps.png" alt="">
+                    </div>
+                    <div>
+                        <span>BASED IN</span>
+                        <strong>London, United Kingdom</strong>
+                    </div>
                 </div>
 
-                <p>
-                    I am a self-taught programmer and Year 10 student. I taught myself Python and C++ and I love mathematics, computer science, and building things from scratch.
+                <p class="about-text">
+                    I am a self-taught programmer and Year 10 student. I taught myself Python and C++ and I love mathematics, computer science.
                 </p>
-            </div>
-        </section>
 
-        <section class="section">
-            <div class="section-heading">
-                <span class="section-number">02</span>
-                <h2>Projects</h2>
-            </div>
+                <div class="about-line"></div>
 
-            <div class="projects">
-
-                <a class="project" href="https://github.com/ayaandh/Library-Management-System" target="_blank">
-                    <div class="project-top">
-                        <span class="project-name">Library Management System</span>
-                        <span class="project-arrow">↗</span>
+                <div class="about-stats">
+                    <div>
+                        <strong>09</strong>
+                        <span>YEARS OF EXPERIENCE</span>
                     </div>
+
+                    <div>
+                        <strong>06</strong>
+                        <span>LANGUAGES I'VE WORKED WITH</span>
+                    </div>
+
+                    <div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects section-shell" id="projects">
+        <div class="section-label">
+            <span>02</span>
+            SELECTED WORK
+        </div>
+
+        <div class="section-title-row">
+            <div>
+                <p>PROJECTS</p>
+                <h2>My Gallery of Projects.</h2>
+            </div>
+
+            <span class="project-count">06 PROJECTS</span>
+        </div>
+
+        <div class="project-grid">
+
+            <a class="project project-large" href="https://github.com/ayaandh/Library-Management-System" target="_blank" rel="noopener noreferrer">
+                <div class="project-glow"></div>
+
+                <div class="project-meta">
+                    <span>01</span>
+                    <span>C++</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Library Management System</h3>
                     <p>A library management system written in C++.</p>
-                    <span class="project-language">C++</span>
-                </a>
+                </div>
 
-                <a class="project" href="https://github.com/ayaandh/Basic-Negotiation-System" target="_blank">
-                    <div class="project-top">
-                        <span class="project-name">Basic Negotiation System</span>
-                        <span class="project-arrow">↗</span>
-                    </div>
+                <div class="project-footer">
+                    <span>VIEW PROJECT</span>
+                    <b>↗</b>
+                </div>
+            </a>
+
+            <a class="project project-large" href="https://github.com/ayaandh/Basic-Negotiation-System" target="_blank" rel="noopener noreferrer">
+                <div class="project-glow"></div>
+
+                <div class="project-meta">
+                    <span>02</span>
+                    <span>C++</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Basic Negotiation System</h3>
                     <p>A basic negotiation system written in C++.</p>
-                    <span class="project-language">C++</span>
-                </a>
+                </div>
 
-                <a class="project" href="https://github.com/ayaandh/dhctl-source-code" target="_blank">
-                    <div class="project-top">
-                        <span class="project-name">dhctl</span>
-                        <span class="project-arrow">↗</span>
-                    </div>
+                <div class="project-footer">
+                    <span>VIEW PROJECT</span>
+                    <b>↗</b>
+                </div>
+            </a>
+
+            <a class="project" href="https://dhctl.ayaan.is-a.dev" target="_blank" rel="noopener noreferrer">
+                <div class="project-meta">
+                    <span>03</span>
+                    <span>PYTHON</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>dhctl</h3>
                     <p>A simple command-line development tool written in Python.</p>
-                    <span class="project-language">Python</span>
-                </a>
+                </div>
 
-                <a class="project" href="https://github.com/ayaandh/Pillow" target="_blank">
-                    <div class="project-top">
-                        <span class="project-name">Pillow</span>
-                        <span class="project-arrow">↗</span>
-                    </div>
+                <div class="project-footer">
+                    <span>VIEW PROJECT</span>
+                    <b>↗</b>
+                </div>
+            </a>
+
+            <a class="project" href="https://github.com/ayaandh/Pillow" target="_blank" rel="noopener noreferrer">
+                <div class="project-meta">
+                    <span>04</span>
+                    <span>PYTHON</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Pillow</h3>
                     <p>A bare-bones browser written in Python.</p>
-                    <span class="project-language">Python</span>
-                </a>
+                </div>
 
-                <a class="project" href="https://github.com/ayaandh/pplayer" target="_blank">
-                    <div class="project-top">
-                        <span class="project-name">pplayer</span>
-                        <span class="project-arrow">↗</span>
-                    </div>
+                <div class="project-footer">
+                    <span>VIEW PROJECT</span>
+                    <b>↗</b>
+                </div>
+            </a>
+
+            <a class="project" href="https://github.com/ayaandh/pplayer" target="_blank" rel="noopener noreferrer">
+                <div class="project-meta">
+                    <span>05</span>
+                    <span>PYTHON</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>pplayer</h3>
                     <p>A Python library for creating playable entities for Pygame.</p>
-                    <span class="project-language">Python</span>
-                </a>
+                </div>
 
-                <a class="project" href="https://github.com/ayaandh/EncryptionSystem" target="_blank">
-                    <div class="project-top">
-                        <span class="project-name">Encryption System</span>
-                        <span class="project-arrow">↗</span>
-                    </div>
+                <div class="project-footer">
+                    <span>VIEW PROJECT</span>
+                    <b>↗</b>
+                </div>
+            </a>
+
+            <a class="project" href="https://github.com/ayaandh/EncryptionSystem" target="_blank" rel="noopener noreferrer">
+                <div class="project-meta">
+                    <span>06</span>
+                    <span>C++</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Encryption System</h3>
                     <p>A simple password encryption script written in C++.</p>
-                    <span class="project-language">C++</span>
-                </a>
+                </div>
 
+                <div class="project-footer">
+                    <span>VIEW PROJECT</span>
+                    <b>↗</b>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="activity section-shell" id="activity">
+        <div class="section-label">
+            <span>03</span>
+            GITHUB ACTIVITY
+        </div>
+
+        <div class="activity-heading">
+            <div>
+                <p>OPEN SOURCE</p>
+                <h2>My Contribution History.</h2>
             </div>
-        </section>
 
-        <section class="section activity-section">
-            <div class="section-heading activity-heading">
-                <div>
-                    <span class="section-number">03</span>
-                    <h2>What I've been up to</h2>
-                </div>
-
-                <span class="contribution-total" id="contributionCount">
-                    Loading...
-                </span>
+            <div class="contribution-total" id="contributionCount">
+                Loading...
             </div>
+        </div>
 
-            <div class="activity-card">
-                <div class="graph-header">
-                    <div class="months" id="months"></div>
+        <div class="activity-card">
+
+            <div class="activity-header">
+                <div class="activity-title">
+                    <span class="activity-dot"></span>
+                    2026 CONTRIBUTIONS
                 </div>
 
-                <div class="graph-container">
-                    <div class="weekdays">
-                        <span></span>
-                        <span>Mon</span>
-                        <span></span>
-                        <span>Wed</span>
-                        <span></span>
-                        <span>Fri</span>
-                        <span></span>
-                    </div>
-
-                    <div class="graph" id="contributionGraph"></div>
-                </div>
-
-                <div class="graph-footer">
+                <div class="legend">
                     <span>Less</span>
-                    <div class="legend">
-                        <span class="legend-cell level-0"></span>
-                        <span class="legend-cell level-1"></span>
-                        <span class="legend-cell level-2"></span>
-                        <span class="legend-cell level-3"></span>
-                        <span class="legend-cell level-4"></span>
-                    </div>
+                    <i class="level-0"></i>
+                    <i class="level-1"></i>
+                    <i class="level-2"></i>
+                    <i class="level-3"></i>
+                    <i class="level-4"></i>
                     <span>More</span>
                 </div>
             </div>
-        </section>
 
-        <footer class="footer">
-            <div>
-                <span class="section-number">04</span>
-                <h2>Contact</h2>
+            <div class="graph-layout">
+                <div class="weekdays">
+                    <span></span>
+                    <span>Mon</span>
+                    <span></span>
+                    <span>Wed</span>
+                    <span></span>
+                    <span>Fri</span>
+                    <span></span>
+                </div>
+
+                <div class="graph-scroll">
+                    <div class="months" id="months"></div>
+                    <div class="graph" id="contributionGraph"></div>
+                </div>
             </div>
 
-            <p>Find me on</p>
-
-            <div class="socials">
-                <a href="https://github.com/ayaandh" target="_blank">
-                    <img src="Github.png" alt="GitHub">
-                    GitHub
-                </a>
-
-                <a href="https://linkedin.com/in/ayaan-dhalait" target="_blank">
-                    <img src="linkedin.png" alt="LinkedIn">
-                    LinkedIn
-                </a>
+            <div class="activity-footer">
+                <span>github.com/ayaandh</span>
+                <span>ACTIVE DEVELOPER</span>
             </div>
 
-            <p class="copyright">© 2026 Ayaan Dhalait</p>
-        </footer>
+        </div>
+    </section>
 
-    </main>
+    <section class="contact section-shell" id="contact">
+        <div class="contact-box">
 
-    <div class="tooltip" id="tooltip"></div>
+            <div class="contact-background">04</div>
 
-    <script src="script.js"></script>
+            <div class="contact-content">
+                <div class="section-label">
+                    <span>04</span>
+                    CONTACT
+                </div>
+
+                <p>Find me on</p>
+
+                <h2>
+                    Find me<br>
+                    <span>on</span>
+                </h2>
+
+                <div class="socials">
+
+                    <a href="https://github.com/ayaandh" target="_blank" rel="noopener noreferrer">
+                        <img src="Github.png" alt="GitHub">
+                        <div>
+                            <span>GITHUB</span>
+                            <strong>ayaandh</strong>
+                        </div>
+                        <b>↗</b>
+                    </a>
+
+                    <a href="https://linkedin.com/in/ayaan-dhalait" target="_blank" rel="noopener noreferrer">
+                        <img src="linkedin.png" alt="LinkedIn">
+                        <div>
+                            <span>LINKEDIN</span>
+                            <strong>Ayaan Dhalait</strong>
+                        </div>
+                        <b>↗</b>
+                    </a>
+                    <a href="https://discord.com/users/1444340744356761781" target="_blank" rel="noopener noreferrer">
+                        <img src="Discord.png" alt="Discord">
+                        <div>
+                            <span>DISCORD</span>
+                            <strong>ayaandh</strong>
+                        </div>
+                        <b>↗</b>
+                    </a>
+                    <a href="https://open.spotify.com/user/31tiqnq6bsr7pyozuwboyiyk34xu" target="_blank" rel="noopener noreferrer">
+                        <img src="Spotify.png" alt="Spotify">
+                        <div>
+                            <span>SPOTIFY</span>
+                            <strong>Ayaan Dhalait</strong>
+                        </div>
+                        <b>↗</b>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <span>© 2026 Ayaan Dhalait</span>
+        <span>BUILT WITH CODE</span>
+        <a href="#">BACK TO TOP ↑</a>
+    </div>
+</footer>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

@@ -68,13 +68,13 @@ async function loadContributions() {
                     `${count} contribution${count === 1 ? "" : "s"} on ${formattedDate}`;
 
                 tooltip.style.display = "block";
-                tooltip.style.left = `${event.clientX}px`;
-                tooltip.style.top = `${event.clientY}px`;
+                tooltip.style.left = `${event.clientX + 12}px`;
+                tooltip.style.top = `${event.clientY - 12}px`;
             });
 
             day.addEventListener("mousemove", event => {
-                tooltip.style.left = `${event.clientX}px`;
-                tooltip.style.top = `${event.clientY}px`;
+                tooltip.style.left = `${event.clientX + 12}px`;
+                tooltip.style.top = `${event.clientY - 12}px`;
             });
 
             day.addEventListener("mouseleave", () => {
@@ -104,7 +104,10 @@ function createMonthLabels() {
 
     for (let week = 0; week < 54; week++) {
         const date = new Date(start);
-        date.setDate(start.getDate() + week * 7);
+
+        date.setDate(
+            start.getDate() + week * 7
+        );
 
         if (date.getFullYear() !== 2026) {
             continue;
